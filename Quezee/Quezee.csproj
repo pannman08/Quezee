@@ -1,0 +1,272 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{812CD583-19D5-48DD-9003-B20A4BCE0C2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quezee</RootNamespace>
+    <AssemblyName>Quezee</AssemblyName>
+    <ApplicationIcon>quezee.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>377E29451BA981358BD03C7EF37FC276CEC2283A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Quezee_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Cameron\My Documents\Visual Studio 2005\Projects\Quezee\Quezee\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APIKeyPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APIKeyPrompt.Designer.cs">
+      <DependentUpon>APIKeyPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFavorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveFavorites.Designer.cs">
+      <DependentUpon>RemoveFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadWarning.Designer.cs">
+      <DependentUpon>DownloadWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JackServerPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JackServerPrompt.Designer.cs">
+      <DependentUpon>JackServerPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JackTheRipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JackTheRipper.Designer.cs">
+      <DependentUpon>JackTheRipper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterForm.Designer.cs">
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player.Designer.cs">
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APIKeyPrompt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>APIKeyPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveFavorites.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RemoveFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadWarning.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DownloadWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackServerPrompt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JackServerPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackTheRipper.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JackTheRipper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results.Designer.cs">
+      <DependentUpon>Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater.cs" />
+    <Compile Include="Video.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="quezee.ico" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\favorite.png" />
+    <None Include="Resources\wxp_240.ico" />
+    <None Include="Resources\w98_trust0.ico" />
+    <None Include="Resources\w98_settings_gear.ico" />
+    <None Include="Resources\w98_newspaper.ico" />
+    <None Include="Resources\w98_media_player_stream_conn2.ico" />
+    <None Include="Resources\w98_filepack.ico" />
+    <None Include="Resources\w98_file_set.ico" />
+    <None Include="Resources\w98_catalog.ico" />
+    <None Include="Resources\w98_accessibility_two_windows.ico" />
+    <None Include="Resources\w2k_wmp_19.ico" />
+    <None Include="Resources\w2k_network_3.ico" />
+    <None Include="Resources\w2k_multiple_files.ico" />
+    <None Include="Resources\w2k_key_2.ico" />
+    <None Include="Resources\w2k_info.ico" />
+    <None Include="Resources\w2k_entire_network.ico" />
+    <None Include="Resources\w2k_2.ico" />
+    <None Include="Resources\USA-flag-no-stars.png" />
+    <None Include="Resources\Settings.ico" />
+    <None Include="Resources\magnifying_glass_4-1.png" />
+    <None Include="Resources\magnifying_glass_3.png" />
+    <None Include="Resources\favicon.bmp" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxSHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
